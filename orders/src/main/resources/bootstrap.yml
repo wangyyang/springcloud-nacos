@@ -1,0 +1,19 @@
+server:
+  port: 8821
+spring:
+  application:
+    name: orders
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        ext-config[1]:
+          data-id: jdbc.yml
+          group: DEFAULT_GROUP
+          refresh: true
+        ext-config[0]:
+          data-id: default.properties
+          group: DEFAULT_GROUP
+          refresh: true
