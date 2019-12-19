@@ -5,6 +5,8 @@ spring:
     name: job
   cloud:
     nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
       config:
         server-addr: 127.0.0.1:8848
         ext-config[1]:

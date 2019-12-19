@@ -7,9 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="job" />
-        <module name="orders" />
-        <module name="commons" />
         <module name="nacos-discovery-server" />
+        <module name="commons" />
+        <module name="orders" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
