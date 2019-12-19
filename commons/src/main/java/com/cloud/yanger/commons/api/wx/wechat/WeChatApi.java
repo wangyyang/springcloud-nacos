@@ -7,12 +7,14 @@ import com.cloud.yanger.commons.util.JSONUtils;
 import okhttp3.Response;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 import java.io.InputStream;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+@RefreshScope
 public class WeChatApi {
 
     //小程序ID

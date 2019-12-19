@@ -12,6 +12,7 @@ import com.gexin.rp.sdk.http.IGtPush;
 import com.gexin.rp.sdk.template.*;
 import com.gexin.rp.sdk.template.style.Style0;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,8 @@ import java.util.List;
 /**
  * 个推 基础API
  */
+
+@RefreshScope
 public class AppPushApi {
 
     //个推APPID

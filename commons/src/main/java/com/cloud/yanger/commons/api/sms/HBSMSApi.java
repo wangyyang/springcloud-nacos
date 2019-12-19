@@ -2,12 +2,14 @@ package com.cloud.yanger.commons.api.sms;
 
 import com.cloud.yanger.commons.util.HttpClient;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+@RefreshScope
 public class HBSMSApi {
 
     //用户名

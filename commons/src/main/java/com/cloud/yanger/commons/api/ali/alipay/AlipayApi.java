@@ -22,12 +22,14 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 import javax.annotation.PostConstruct;
 import java.util.Map;
 
 @Data
 @Slf4j
+@RefreshScope
 public class AlipayApi {
 
     //支付宝APPID

@@ -8,6 +8,7 @@ import com.github.wxpay.sdk.WXPayConfig;
 import com.github.wxpay.sdk.WXPayUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 import javax.annotation.PostConstruct;
 import java.util.Map;
@@ -15,6 +16,7 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 @Slf4j
+@RefreshScope
 public class WxpayApi {
     //APP
     @Value("${wechat.app.appid}")

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.LinkedMultiValueMap;
@@ -18,6 +19,7 @@ import java.util.Map;
  * 云信基础API
  */
 @Slf4j
+@RefreshScope
 public class NimApi {
     //云信APPKEY
     @Value("${config.im.appKey}")
