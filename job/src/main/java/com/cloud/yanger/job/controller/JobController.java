@@ -18,9 +18,15 @@ public class JobController {
 
 
     @PostMapping("getJobList")
-    public Object getJobList() {
-        LambdaQueryWrapper<Job> lq = new LambdaQueryWrapper<>();
-        lq.eq(Job::getStatus, JobStatusConstants.RECRUITMENT);
-        return jobService.list(lq);
+    public Object getJobList(Integer status) {
+        if (status == null) {
+            LambdaQueryWrapper<Job> lq = new LambdaQueryWrapper<>();
+            lq.eq(Job::getStatus, JobStatusConstants.RECRUITMENT);
+            return jobService.list(lq);
+        } else {
+            LambdaQueryWrapper<Job> lq = new LambdaQueryWrapper<>();
+            lq.eq(Job::getStatus, status);
+            return jobService.list(lq);
+        }
     }
 }

@@ -28,6 +28,11 @@ public class OrdersController {
         return ordersService.list(lq);
     }
 
+    @PostMapping("getJobListByStatus")
+    public Object getJobListByStatus(Integer status){
+        return jobClient.getJobListByStatus(status);
+    }
+
     @PostMapping("getJobList")
     public Object getJobList(@RequestBody QueryStat queryStat) {
         return jobClient.getJobList(queryStat);
